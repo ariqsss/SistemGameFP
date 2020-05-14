@@ -10,6 +10,8 @@ public class QuestionManager : MonoBehaviour
     public Question[] questions;
     public GameObject correctPanel;
     public GameObject wrongPanel;
+    public GameObject Lose;
+    public GameObject QuizCanvas;
 
     private static List<Question> unasweredQuestions;
     private Question currentQuestion;
@@ -47,19 +49,53 @@ public class QuestionManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void UserSelectTrue()
+    IEnumerator CorrectAns()
+    {
+
+        
+        yield return new WaitForSeconds(1f);
+        correctPanel.SetActive(false);
+        int previouslevel = PlayerPrefs.GetInt("level");
+        if (previouslevel == 1)
+        {
+           
+            SceneManager.LoadScene("level1");
+        }
+        if (previouslevel == 2)
+        {
+            
+            SceneManager.LoadScene("level2");
+        }
+
+    }
+
+    IEnumerator WrongAns()
+    {
+
+
+        yield return new WaitForSeconds(1f);
+        QuizCanvas.SetActive(false);
+        wrongPanel.SetActive(false);
+        Time.timeScale = 0;
+        Lose.SetActive(true);
+
+    }
+
+        public void UserSelectTrue()
     {
         if (currentQuestion.isTrue)
         {
             Debug.Log("CORRECT!");
             correctPanel.SetActive(true);
+            StartCoroutine(CorrectAns());
         }
         else
         {
             Debug.Log("WRONG!");
             wrongPanel.SetActive(true);
+            StartCoroutine(WrongAns());
         }
-        StartCoroutine(TransitionToNextQuestion());
+       
     }
 
     public void UserSelectFalse()
@@ -68,12 +104,15 @@ public class QuestionManager : MonoBehaviour
         {
             Debug.Log("CORRECT!");
             correctPanel.SetActive(true);
+            StartCoroutine(CorrectAns());
+
         }
         else
         {
             Debug.Log("WRONG!");
             wrongPanel.SetActive(true);
+            StartCoroutine(WrongAns());
         }
-        StartCoroutine(TransitionToNextQuestion());
+       
     }
 }
