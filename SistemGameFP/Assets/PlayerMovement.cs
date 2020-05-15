@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        //////////////////////////////////////////////////////// need change if add level
         if (other.gameObject.name == "Right1")
         {
             SceneManager.LoadScene("level2");
@@ -40,7 +41,15 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene("level3");
         }
-        ////////////////////////////////////////////////////////
+        if (other.gameObject.name == "Right3")
+        {
+            SceneManager.LoadScene("level4");
+        }
+        if (other.gameObject.name == "Right4")
+        {
+            SceneManager.LoadScene("level5");
+        }
+        //////////////////////////////////////////////////////// need change if add level
         if (other.gameObject.name == "Wrong")
         {
             Debug.Log("Change Scene!");
@@ -60,22 +69,19 @@ public class PlayerMovement : MonoBehaviour
                 PlayerPrefs.SetInt("level", 3);
                 Debug.Log("SavedCurrentLevel : 3");
             }
-
+            if (string.Equals(CurrentScene, "level4"))
+            {
+                PlayerPrefs.SetInt("level", 4);
+                Debug.Log("SavedCurrentLevel : 4");
+            }
+            if (string.Equals(CurrentScene, "level5"))
+            {
+                PlayerPrefs.SetInt("level", 5);
+                Debug.Log("SavedCurrentLevel : 5");
+            }
             SceneManager.LoadScene("EnemyQuiz");
         }
-        ////////////////////////////////////////////////////////
-        if (other.gameObject.name == "Clear")
-        {
-            int previouslevel = PlayerPrefs.GetInt("level");
-            if (previouslevel == 1)
-            {
-                SceneManager.LoadScene("level1");
-            }
-            if (previouslevel == 2)
-            {
-                SceneManager.LoadScene("level2");
-            }
-        }
+        
     }
 
     private void FixedUpdate()

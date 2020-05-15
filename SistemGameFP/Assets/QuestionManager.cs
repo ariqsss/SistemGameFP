@@ -51,8 +51,8 @@ public class QuestionManager : MonoBehaviour
 
     IEnumerator CorrectAns()
     {
+        //////////////////////////////////////////////////////// need change if add level
 
-        
         yield return new WaitForSeconds(1f);
         correctPanel.SetActive(false);
         int previouslevel = PlayerPrefs.GetInt("level");
@@ -66,7 +66,16 @@ public class QuestionManager : MonoBehaviour
             
             SceneManager.LoadScene("level2");
         }
+        if (previouslevel == 3)
+        {
 
+            SceneManager.LoadScene("level3");
+        }
+        if (previouslevel == 4)
+        {
+
+            SceneManager.LoadScene("level4");
+        }
     }
 
     IEnumerator WrongAns()
