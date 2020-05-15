@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public void Start()
     {
          CurrentScene = SceneManager.GetActiveScene().name;
+        Time.timeScale = 1;
     }
     void Update()
     {

@@ -109,6 +109,7 @@
     <Compile Include="Assets\PlayerMovement.cs" />
     <Compile Include="Assets\Question.cs" />
     <Compile Include="Assets\QuestionManager.cs" />
+    <Compile Include="Assets\RestartButton.cs" />
     <None Include="Assets\MaterialUI\Fonts\NOTICE.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/gitkraken/SistemGameFP/SistemGameFP/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
