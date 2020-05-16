@@ -1,21 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/level1.unity
+- path: Assets/Scenes/MainMenu.unity
   isLoaded: 1
   isActive: 1
-  isSubScene: 0
-- path: Assets/level2.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/level3.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/level4.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/EnemyQuiz.unity
-  isLoaded: 0
-  isActive: 0
   isSubScene: 0
