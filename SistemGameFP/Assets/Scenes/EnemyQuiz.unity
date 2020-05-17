@@ -8972,6 +8972,7 @@ MonoBehaviour:
   wrongPanel: {fileID: 1996101087}
   Lose: {fileID: 489353084}
   QuizCanvas: {fileID: 1217785370}
+  enemy: {fileID: 1404081675}
   factText: {fileID: 232120461}
   timeBetweenQuestions: 1
 --- !u!4 &2104721011

@@ -112,6 +112,7 @@
     <Compile Include="Assets\Question.cs" />
     <Compile Include="Assets\QuestionManager.cs" />
     <Compile Include="Assets\RestartButton.cs" />
+    <Compile Include="Assets\TreasureRoomUI.cs" />
     <None Include="Assets\MaterialUI\Fonts\NOTICE.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/KULIAH/Semester 8/Sistem Game/Github/SistemGameFP/SistemGameFP/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

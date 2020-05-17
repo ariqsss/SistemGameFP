@@ -14,6 +14,7 @@ public class QuestionManager : MonoBehaviour
     public GameObject wrongPanel;
     public GameObject Lose;
     public GameObject QuizCanvas;
+    public GameObject enemy;
 
     private static List<Question> unasweredQuestions;
     private Question currentQuestion;
@@ -54,17 +55,18 @@ public class QuestionManager : MonoBehaviour
     IEnumerator CorrectAns()
     {
         //////////////////////////////////////////////////////// need change if add level
-
+        Time.timeScale = 1;
         yield return new WaitForSeconds(1f);
+        
         correctPanel.SetActive(false);
         QuizCanvas.SetActive(false);
-        
+        Destroy(enemy);
     }
 
     IEnumerator WrongAns()
     {
 
-
+        Time.timeScale = 1;
         yield return new WaitForSeconds(1f);
         QuizCanvas.SetActive(false);
         wrongPanel.SetActive(false);

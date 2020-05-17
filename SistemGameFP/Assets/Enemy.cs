@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Battle.SetActive(false);
         QuizCanvas.SetActive(true);
+        Time.timeScale = 0;
 
     }
     void Update()
