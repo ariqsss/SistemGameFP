@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class QuestionManager : MonoBehaviour
 {
+    public Enemy enemyscript;
+
     public Question[] questions;
     public GameObject correctPanel;
     public GameObject wrongPanel;
@@ -55,27 +57,8 @@ public class QuestionManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         correctPanel.SetActive(false);
-        int previouslevel = PlayerPrefs.GetInt("level");
-        if (previouslevel == 1)
-        {
-           
-            SceneManager.LoadScene("level1");
-        }
-        if (previouslevel == 2)
-        {
-            
-            SceneManager.LoadScene("level2");
-        }
-        if (previouslevel == 3)
-        {
-
-            SceneManager.LoadScene("level3");
-        }
-        if (previouslevel == 4)
-        {
-
-            SceneManager.LoadScene("level4");
-        }
+        QuizCanvas.SetActive(false);
+        
     }
 
     IEnumerator WrongAns()
@@ -85,8 +68,11 @@ public class QuestionManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         QuizCanvas.SetActive(false);
         wrongPanel.SetActive(false);
+        enemyscript.iscollidetarget1 = true;
+        yield return new WaitForSeconds(1f);
         Time.timeScale = 0;
         Lose.SetActive(true);
+ 
 
     }
 

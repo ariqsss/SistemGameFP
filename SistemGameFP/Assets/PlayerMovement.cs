@@ -81,8 +81,31 @@ public class PlayerMovement : MonoBehaviour
             }
             SceneManager.LoadScene("EnemyQuiz");
         }
-        
-    }
+        if (other.gameObject.name == "Backdoor")
+        {
+            int previouslevel = PlayerPrefs.GetInt("level");
+            if (previouslevel == 1)
+            {
+
+                SceneManager.LoadScene("level1");
+            }
+            if (previouslevel == 2)
+            {
+
+                SceneManager.LoadScene("level2");
+            }
+            if (previouslevel == 3)
+            {
+
+                SceneManager.LoadScene("level3");
+            }
+            if (previouslevel == 4)
+            {
+
+                SceneManager.LoadScene("level4");
+            }
+        }
+        }
 
     private void FixedUpdate()
     {
