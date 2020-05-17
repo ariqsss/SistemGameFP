@@ -8928,12 +8928,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyscript: {fileID: 1404081678}
   questions:
-  - question: Bumi berbentuk donat ?
+  - question: Kutai adalah kerajaan hindu tertua di Indonesia
+    isTrue: 1
+  - question: Herbivora adalah hewan pemakan segala
     isTrue: 0
-  - question: Bebek mandi di kali ?
+  - question: Pusat tata surya adalah Bumi
+    isTrue: 0
+  - question: Benda yang baik dalam menghantarkan listrik disebut Konduktor
     isTrue: 1
-  - question: BDO game P2W ?
+  - question: Kelipatan Persekutuan Terkecil dari 4 dan 5 adalah 20
     isTrue: 1
+  - question: Ir.Soekarno adalah orang yang mengetik naskah proklamasi
+    isTrue: 0
+  - question: Jupiter adalah planet paling besar dalam tata surya
+    isTrue: 1
+  - question: Ikan bernapas dengan menggunakan paru-paru
+    isTrue: 0
+  - question: Charles Darwin adalah penemu lampu
+    isTrue: 0
+  - question: Hayam Wuruk adalah raja terkenal dari kerajaan Majapahit
+    isTrue: 1
+  - question: Pergantian siang dan malam diakibatkan revolusi bumi
+    isTrue: 0
+  - question: Isaac newton adalah penemu gravitasi
+    isTrue: 1
+  - question: 1089 x 9 = 9801
+    isTrue: 1
+  - question: Ovipar adalah perkembangbiakan dengan cara melahirkan
+    isTrue: 0
+  - question: Zat padat yang dipanaskan akan menguap
+    isTrue: 0
+  - question: Energi kekal dan tidak dapat dimusnahkan
+    isTrue: 1
+  - question: Ideologi bangsa Indonesia adalah pancasila
+    isTrue: 1
+  - question: Bulan Juli memiliki 30 hari
+    isTrue: 0
+  - question: Indonesia adalah negara Maritim
+    isTrue: 1
+  - question: Masa jabatan presiden adalah 4 tahun
+    isTrue: 0
   correctPanel: {fileID: 1458247291}
   wrongPanel: {fileID: 1996101087}
   Lose: {fileID: 489353084}

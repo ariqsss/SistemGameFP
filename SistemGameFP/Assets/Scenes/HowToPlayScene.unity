@@ -1445,18 +1445,37 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 59190367a1349c84485371e259de4c62, type: 3}
-    m_FontSize: 150
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 200
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ini Nanti How To Play
+  m_Text: 'Cara Bermain :
+
+    1. Pemain dapat berjalan menggunakan tombol W, A, S, dan D.
+
+    2. Pemain diharuskan memilih pintu rahasia yang benar untuk mencapai ruangan selanjutnya.
+
+    3. Jika pemain memilih pintu yang salah, pemain akan dihadapkan dengan musuh yang
+    akan memberikan sebuah fakta secara acak.
+
+    4. Pemain harus memilih apakah fakta yang diberikan itu benar atau salah.
+
+    5. Jika pemain menebak dengan tepat maka pemain dapat kembali ke ruangan asal
+    dan memilih pintu lain untuk dimasuki.
+
+    6. Jika pemain memilih jawaban yang tidak tepat, maka permainan berakhir.
+
+    7. Pemain akan menang jika sampai ke ruang harta dengan selamat.
+
+
+'
 --- !u!222 &1568684373
 CanvasRenderer:
   m_ObjectHideFlags: 0
