@@ -10,14 +10,15 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public int health = 2;
     string CurrentScene;
-
-
+     
     Vector2 movement;
     // Update is called once per frame
     public void Start()
     {
          CurrentScene = SceneManager.GetActiveScene().name;
         Time.timeScale = 1;
+       
+        GameObject.FindGameObjectWithTag("Music").GetComponent<bgmusicscript>().PlayMusic();
     }
     void Update()
     {
@@ -32,26 +33,33 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+       
         //////////////////////////////////////////////////////// need change if add level
         if (other.gameObject.name == "Right1")
         {
+            GameObject.FindGameObjectWithTag("Music").GetComponent<bgmusicscript>().PlayDoor();
             SceneManager.LoadScene("level2");
         }
         if (other.gameObject.name == "Right2")
         {
+            GameObject.FindGameObjectWithTag("Music").GetComponent<bgmusicscript>().PlayDoor();
             SceneManager.LoadScene("level3");
         }
         if (other.gameObject.name == "Right3")
         {
+            GameObject.FindGameObjectWithTag("Music").GetComponent<bgmusicscript>().PlayDoor();
             SceneManager.LoadScene("level4");
         }
         if (other.gameObject.name == "Right4")
         {
+            GameObject.FindGameObjectWithTag("Music").GetComponent<bgmusicscript>().PlayDoor();
+            GameObject.FindGameObjectWithTag("Music").GetComponent<bgmusicscript>().PlayWin();
             SceneManager.LoadScene("level5");
         }
         //////////////////////////////////////////////////////// need change if add level
         if (other.gameObject.name == "Wrong")
         {
+            GameObject.FindGameObjectWithTag("Music").GetComponent<bgmusicscript>().PlayDoor();
             Debug.Log("Change Scene!");
             if (string.Equals(CurrentScene, "level1"))
             {

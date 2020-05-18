@@ -16,6 +16,11 @@ public class QuestionManager : MonoBehaviour
     public GameObject QuizCanvas;
     public GameObject enemy;
 
+    public AudioSource audioSource1;
+    public AudioSource audioSource2;
+    public AudioClip clip1;
+    public AudioClip clip2;
+
     private static List<Question> unasweredQuestions;
     private Question currentQuestion;
 
@@ -27,7 +32,9 @@ public class QuestionManager : MonoBehaviour
 
     void Start()
     {
-        if(unasweredQuestions == null || unasweredQuestions.Count == 0)
+        audioSource1 = GetComponent<AudioSource>();
+        audioSource2 = GetComponent<AudioSource>();
+        if (unasweredQuestions == null || unasweredQuestions.Count == 0)
         {
             unasweredQuestions = questions.ToList<Question>();
         }
@@ -56,6 +63,8 @@ public class QuestionManager : MonoBehaviour
     {
         //////////////////////////////////////////////////////// need change if add level
         Time.timeScale = 1;
+        unasweredQuestions.Remove(currentQuestion);
+        audioSource1.PlayOneShot(clip1);
         yield return new WaitForSeconds(1f);
         
         correctPanel.SetActive(false);
@@ -67,6 +76,7 @@ public class QuestionManager : MonoBehaviour
     {
 
         Time.timeScale = 1;
+        audioSource2.PlayOneShot(clip2);
         yield return new WaitForSeconds(1f);
         QuizCanvas.SetActive(false);
         wrongPanel.SetActive(false);
